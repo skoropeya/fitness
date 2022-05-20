@@ -1,0 +1,45 @@
+// Colors
+// ---------------------------------
+
+// Default
+
+$color-black:               #000000;
+$color-white:               #ffffff;
+$color-transparent:         rgba(255, 255, 255, 0);
+
+// Project palette
+// для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
+
+$color-sapphire:        #102654;
+$color-ghost-white:     #F8F9FC;
+$color-egyptian-blue:   #103AAE;
+$color-torch-red:       #ED0233;
+$color-resolution-blue: #1C3374;
+$color-black-russian:   #030A1A;
+
+// Gradient
+
+
+// Typography
+// ---------------------------------
+
+// переменная используемая в html для подключения скейлинга
+$fz-default:                        16px;
+
+// у некоторых шрифтов в ios возникают проблемы с символом рубля
+// https://www.artlebedev.ru/kovodstvo/sections/159/#13
+$ff-bebas-neue:       "Bebas Neue", "Arial", sans-serif;
+$ff-roboto-condensed: "Roboto Condensed", "Arial", sans-serif;
+
+// Viewports
+// ---------------------------------
+
+$vp-320:                            320px;
+$vp-768:                            768px;
+$vp-1200:                           1200px;
+
+// Retina
+// ---------------------------------
+
+$retina-dpi:                        144dpi;
+$retina-dppx:                       1.5dppx;

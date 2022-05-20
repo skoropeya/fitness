@@ -1,0 +1,24 @@
+@mixin retina {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @content;
+  }
+}
+
+// Desktop first
+
+@mixin vp-1199 {
+  @media (max-width: $vp-1200 - 1) {
+    @content;
+  }
+}
+
+@mixin vp-767 {
+  @media (max-width: $vp-768 - 1) {
+    @content;
+  }
+}
+
+// ---------------------------------
+
+// не нужно добавлять свои миксины для ресета списков, обнуления кнопок и прочие
+// этим вы усложняете работу команды, проверку вашего кода и будущую поддержку проекта
