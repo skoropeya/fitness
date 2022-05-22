@@ -71,6 +71,14 @@
               <p>В&nbsp;зале расположены отдельная зона для Crossfit и&nbsp;кардио-зона с&nbsp;40&nbsp;тренажерами. Также в&nbsp;фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</p>
             </div>
 
+            <div class="gym__box gym__box--photo">
+              <!-- 1х: 770px x 402px; 2x: 1540px x 804px -->
+              <picture>
+                <source type="image/webp" srcset="img/content/gym.webp 1x, img/content/gym@2x.webp 2x">
+                <img class="gym__img" src="img/content/gym.jpg" srcset="img/content/gym@2x.jpg 2x" width="770" height="402" alt="Фото пустого тренажерного зала">
+              </picture>
+            </div>
+
             <div class="gym__box gym__box--video">
               <video src="https://www.youtube.com/watch?v=9TZXsZItgdw" poster="img/content/poster-video.jpg" width="364" height="228"></video>
               <button type="button">
@@ -192,7 +200,7 @@
 
         <section class="super-games">
           <div class="container">
-            <div class="super-games__box super-games__box--text">
+            <div class="super-games__box">
               <h2 class="super-games__heading">SUPER GAMES</h2>
               <dl>
                 <dt>Дата</dt>
@@ -208,13 +216,6 @@
               <p>Ежегодные соревнования по CrossFit</p>
               <a class="super-games__btn" href="#">заполнить заявку</a>
             </div>
-
-            <div class="super-games__box super-games__box--img">
-              <!-- 1х: 660px x 500px; 2x: 1320px x 1000px -->
-              <picture>
-                <img class="super-games__img" src="img/content/super-games.jpg" srcset="img/content/super-games@2x 2x" width="660" height="500" alt="">
-              </picture>
-            </div>
           </div>
         </section>
 
@@ -225,8 +226,10 @@
             <ul class="trainers__list">
               <li class="trainers__item">
                 <h3 class="trainers__name">Анна Павлова</h3>
+                <!-- 1х: 260px x 388px; 2x: 520px x 776px -->
                 <picture>
-                  <img class="trainers__photo" src="" width="" height="" alt="Фото Анны Павловой">
+                  <source type="image/webp" srcset="img/content/trainers/avatar-pavlova.webp 1x, img/content/trainers/avatar-pavlova@2x.webp 2x">
+                  <img class="trainers__photo" src="img/content/trainers/avatar-pavlova.jpg" srcset="img/content/trainers/avatar-pavlova@2x.jpg 2x" width="260" height="388" alt="Фото Анны Павловой">
                 </picture>
                 <div class="trainers__description">
                   <p>CrossFit</p>
@@ -240,8 +243,10 @@
 
               <li class="trainers__item">
                 <h3 class="trainers__name">Алексей Лавров</h3>
+                <!-- 1х: 300px x 459px; 2x: 600px x 918px -->
                 <picture>
-                  <img class="trainers__photo" src="" width="" height="" alt="Фото Алексея Лаврова">
+                  <source type="image/webp" srcset="img/content/trainers/avatar-lavrov.webp 1x, img/content/trainers/avatar-lavrov@2x.webp 2x">
+                  <img class="trainers__photo" src="img/content/trainers/avatar-lavrov.jpg" srcset="img/content/trainers/avatar-lavrov@2x.jpg 2x" width="300" height="459" alt="Фото Алексея Лаврова">
                 </picture>
                 <div class="trainers__description">
                   <p>CrossFit</p>
@@ -255,8 +260,10 @@
 
               <li class="trainers__item">
                 <h3 class="trainers__name">Александр Пашков</h3>
+                <!-- 1х: 260px x 451px; 2x: 520px x 902px -->
                 <picture>
-                  <img class="trainers__photo" src="" width="" height="" alt="Фото Александра Пашкова">
+                  <source type="image/webp" srcset="img/content/trainers/avatar-pashkov.webp 1x, img/content/trainers/avatar-pashkov@2x.webp 2x">
+                  <img class="trainers__photo" src="img/content/trainers/avatar-pashkov.jpg" srcset="img/content/trainers/avatar-pashkov@2x.jpg 2x" width="260" height="451" alt="Фото Александра Пашкова">
                 </picture>
                 <div class="trainers__description">
                   <p>CrossFit</p>
@@ -270,8 +277,10 @@
 
               <li class="trainers__item">
                 <h3 class="trainers__name">Мария Кетова</h3>
+                <!-- 1х: 334px x 668px; 2x: 511px x 1022px -->
                 <picture>
-                  <img class="trainers__photo" src="" width="" height="" alt="Фото Марии Кетовой">
+                  <source type="image/webp" srcset="img/content/trainers/avatar-ketova.webp 1x, img/content/trainers/avatar-ketova@2x.webp 2x">
+                  <img class="trainers__photo" src="img/content/trainers/avatar-ketova.jpg" srcset="img/content/trainers/avatar-ketova@2x.jpg 2x" width="334" height="511" alt="Фото Марии Кетовой">
                 </picture>
                 <div class="trainers__description">
                   <p>CrossFit</p>
@@ -284,8 +293,12 @@
               </li>
             </ul>
 
-            <button class="trainers__prev" type="button">Предыдущий слайд</button>
-            <button class="trainers__next" type="button">Следующий слайд</button>
+            <button class="trainers__prev" type="button">
+              <span class="visually-hidden">Предыдущий слайд</span>
+            </button>
+            <button class="trainers__next" type="button">
+              <span class="visually-hidden">Следующий слайд</span>
+            </button>
           </div>
         </section>
 
@@ -294,49 +307,59 @@
             <h2 class="features__heading">Наши преимущества</h2>
 
             <dl class="features__list">
-              <dt class="features__item">
-                <span>Площадь</span>
-                <span>Занимайтесь без очередей и&nbsp;толпучки</span>
-              </dt>
-              <dd class="features__description">
-                <span>900</span>
-                <span>кв/м</span>
-              </dd>
+              <div class="features__item">
+                <dt class="features__term">
+                  <span>Площадь</span>
+                  <span>Занимайтесь без очередей и&nbsp;толпучки</span>
+                </dt>
+                <dd class="features__description">
+                  <span>900</span>
+                  <span>кв/м</span>
+                </dd>
+              </div>
 
-              <dt class="features__item">
-                <span>Собственная парковка</span>
-                <span>Вы&nbsp;всегда найдете место для своей машины на&nbsp;нашей парковке</span>
-              </dt>
-              <dd class="features__description">
-                <span>70</span>
-                <span>машин</span>
-              </dd>
+              <div class="features__item">
+                <dt class="features__term">
+                  <span>Собственная парковка</span>
+                  <span>Вы&nbsp;всегда найдете место для своей машины на&nbsp;нашей парковке</span>
+                </dt>
+                <dd class="features__description">
+                  <span>70</span>
+                  <span>машин</span>
+                </dd>
+              </div>
 
-              <dt class="features__item features__item--accent">
-                <span>Современные тренажеры на&nbsp;все группы мышц</span>
-              </dt>
-              <dd class="features__description">
-                <span>100</span>
-                <span>Тренажеров</span>
-              </dd>
+              <div class="features__item features__item--accent">
+                <dt class="features__term">
+                  <span>Современные тренажеры на&nbsp;все группы мышц</span>
+                </dt>
+                <dd class="features__description">
+                  <span>100</span>
+                  <span>Тренажеров</span>
+                </dd>
+              </div>
 
-              <dt class="features__item">
-                <span>Комфорт</span>
-                <span>Просторные раздевалки, душевые, фен, Wi-Fi, кулеры</span>
-              </dt>
-              <dd class="features__description">
-                <span>350</span>
-                <span>мест</span>
-              </dd>
+              <div class="features__item">
+                <dt class="features__term">
+                  <span>Комфорт</span>
+                  <span>Просторные раздевалки, душевые, фен, Wi-Fi, кулеры</span>
+                </dt>
+                <dd class="features__description">
+                  <span>350</span>
+                  <span>мест</span>
+                </dd>
+              </div>
 
-              <dt class="features__item">
-                <span>Тренерский опыт</span>
-                <span>Добивайтесь своих целей быстрее с&nbsp;профессиональным тренером</span>
-              </dt>
-              <dd class="features__description">
-                <span>5+</span>
-                <span>лет</span>
-              </dd>
+              <div class="features__item">
+                <dt class="features__term">
+                  <span>Тренерский опыт</span>
+                  <span>Добивайтесь своих целей быстрее с&nbsp;профессиональным тренером</span>
+                </dt>
+                <dd class="features__description">
+                  <span>5+</span>
+                  <span>лет</span>
+                </dd>
+              </div>
             </dl>
           </div>
         </section>
@@ -374,28 +397,39 @@
             <ul class="reviews__list">
               <li class="reviews__item">
                 <blockquote>
-                  <picture>
-                    <img class="reviews__author-image" src="" width="" height="" alt="">
-                  </picture>
+                  <div class="reviews__photo">
+                    <!-- 1х: 124px x 174px; 2x: 248px x 348px -->
+                    <picture>
+                      <source type="image/webp" srcset="img/content/reviews/user-avatar.webp 1x, img/content/reviews/user-avatar@2x.webp 2x">
+                      <img class="reviews__author-photo" src="img/content/reviews/user-avatar.jpg" srcset="img/reviews/user-avatar@2x.jpg 2x" width="124" height="174" alt="Аватар автора отзыва">
+                    </picture>
+                  </div>
                   <cite class="reviews__author-name">Анна Орлова</cite>
                   <p class="reviews__text">&laquo;Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;</p>
-                  </div>
-                </blockquote>
-
-                <blockquote>
-                  <picture>
-                    <img class="reviews__author-image" src="" width="" height="" alt="">
-                  </picture>
-                  <cite class="reviews__author-name">Анна Орлова</cite>
-                  <p class="reviews__text">&laquo;Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;</p>
-                  </div>
                 </blockquote>
               </li>
 
+              <li class="reviews__item">
+                <blockquote>
+                  <div class="reviews__photo">
+                    <!-- 1х: 124px x 174px; 2x: 248px x 348px -->
+                    <picture>
+                      <source type="image/webp" srcset="img/content/reviews/user-avatar.webp 1x, img/content/reviews/user-avatar@2x.webp 2x">
+                      <img class="reviews__author-photo" src="img/content/reviews/user-avatar.jpg" srcset="img/reviews/user-avatar@2x.jpg 2x" width="124" height="174" alt="Аватар автора отзыва">
+                    </picture>
+                  </div>
+                  <cite class="reviews__author-name">Анна Орлова2</cite>
+                  <p class="reviews__text">&laquo;Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;</p>
+                </blockquote>
+              </li>
             </ul>
 
-            <button class="reviews__prev" type="button">Предыдущий слайд</button>
-            <button class="reviews__next" type="button">Следующий слайд</button>
+            <button class="reviews__prev" type="button">
+              <span class="visually-hidden">Предыдущий слайд</span>
+            </button>
+            <button class="reviews__next" type="button">
+              <span class="visually-hidden">Следующий слайд</span>
+            </button>
           </div>
         </section>
 
