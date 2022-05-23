@@ -1,0 +1,23 @@
+.gym {
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  .gym__leading {
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 400;
+
+    margin: 0;
+    margin-bottom: 50px;
+  }
+
+  p {
+    font-weight: 300;
+    margin: 0;
+  }
+}
+
+.gym__wrapper {
+  display: grid;
+}
