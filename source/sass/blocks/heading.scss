@@ -1,0 +1,44 @@
+.heading {
+  font-family: $ff-bebas-neue;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 49px;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+  text-transform: capitalize;
+  color: $color-sapphire;
+
+  &--big {
+    color: $color-white;
+    font-size: 109px;
+    line-height: 109px;
+  }
+
+  &--light {
+    color: $color-white;
+  }
+}
+
+@include vp-1199 {
+  .heading {
+    font-size: 42px;
+    line-height: 42px;
+
+    &--big {
+      font-size: 86px;
+      line-height: 86px;
+    }
+  }
+}
+
+@include vp-767 {
+  .heading {
+    font-size: 32px;
+    line-height: 32px;
+
+    &--big {
+      font-size: 78px;
+      line-height: 78px;
+    }
+  }
+}

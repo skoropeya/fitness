@@ -1,0 +1,28 @@
+.btn {
+  display: inline-block;
+  padding: 27px;
+  margin: 10px 0;
+  cursor: pointer;
+  user-select: none;
+  border: 2px solid $color-sapphire;
+
+  font-family: $ff-roboto-condensed;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  align-items: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background-color: $color-transparent;
+
+  &--light {
+    color: $color-white;
+    border-color: $color-white;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
