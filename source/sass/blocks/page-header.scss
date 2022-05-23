@@ -1,14 +1,17 @@
 .page-header {
   padding-top: 30px;
-  background-color: $color-pompadour;
+  background-color: $color-transparent;
   color: $color-white;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .page-header__nav {
   display: flex;
   justify-content: space-between;
-
-  background-color: $color-transparent;
 }
 
 .page-header__logo {
@@ -31,5 +34,36 @@
 
   &:active {
     color: darken($color-white, 40%);
+  }
+}
+
+@include vp-1199 {
+  .page-header {
+    padding-top: 37px;
+  }
+
+  .page-header__logo {
+    margin-top: 2px;
+  }
+
+  .page-header__phone {
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+  }
+}
+
+@include vp-767 {
+  .page-header {
+    padding-top: 16px;
+  }
+
+  .page-header__logo {
+    margin-right: 10px;
+  }
+
+  .page-header__phone {
+    font-size: 20px;
+    line-height: 20px;
   }
 }

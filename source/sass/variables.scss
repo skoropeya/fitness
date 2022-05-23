@@ -24,7 +24,12 @@ $color-pompadour:       #831243;
 // Gradient
 
 // фон главного экрана
-$blue-red-promo: conic-gradient(from 130.31deg at 16.03% 39.06%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
+$blue-red-promo-desktop: conic-gradient(from 130.31deg at 16.03% 39.06%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
+
+$blue-red-promo-tablet:  conic-gradient(from 139.4deg at 20.7% 35.74%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
+
+$blue-red-promo-mobile:  conic-gradient(from 171.43deg at 35.31% 34.22%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
+
 
 // Typography
 // ---------------------------------
@@ -41,8 +46,12 @@ $ff-roboto-condensed: "Roboto Condensed", "Arial", sans-serif;
 // ---------------------------------
 
 $vp-320:                            320px;
+$vp-375:                            375px;
 $vp-768:                            768px;
+$vp-1024:                           1024px;
 $vp-1200:                           1200px;
+$vp-1280:                           1280px;
+$vp-1620:                           1620px;
 
 // Retina
 // ---------------------------------

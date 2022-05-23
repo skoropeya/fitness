@@ -37,10 +37,27 @@
   &--big {
     min-width: 230px;
     border-width: 4px;
+    padding: 19px;
   }
 
   &:disabled {
     opacity: 0.5;
     pointer-events: none;
+  }
+}
+
+@include vp-1199 {
+  .btn {
+    &--big {
+      min-width: 184px;
+    }
+  }
+}
+
+@include vp-767 {
+  .btn {
+    &--big {
+      width: 100%;
+    }
   }
 }
