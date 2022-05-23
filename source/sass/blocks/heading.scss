@@ -5,13 +5,15 @@
   font-size: 49px;
   line-height: 49px;
   letter-spacing: 0.03em;
-  text-transform: capitalize;
+  text-transform: uppercase;
   color: $color-sapphire;
+  margin: 0;
 
   &--big {
     color: $color-white;
     font-size: 109px;
     line-height: 109px;
+    font-weight: 900;
   }
 
   &--light {

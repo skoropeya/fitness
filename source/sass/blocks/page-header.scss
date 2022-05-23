@@ -1,0 +1,35 @@
+.page-header {
+  padding-top: 30px;
+  background-color: $color-pompadour;
+  color: $color-white;
+}
+
+.page-header__nav {
+  display: flex;
+  justify-content: space-between;
+
+  background-color: $color-transparent;
+}
+
+.page-header__logo {
+  margin-right: 15px;
+}
+
+.page-header__phone {
+  font-family: $ff-bebas-neue;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 26px;
+  letter-spacing: 0.03em;
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      color: darken($color-white, 40%);
+    }
+  }
+
+  &:active {
+    color: darken($color-white, 40%);
+  }
+}

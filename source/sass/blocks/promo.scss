@@ -1,0 +1,81 @@
+.promo {
+  padding-top: 170px;
+  padding-bottom: 85px;
+  margin-bottom: 120px;
+  background-color: $color-pompadour;
+  color: $color-white;
+
+  // background: $blue-red-promo;
+
+  background-image: url(../img/back/promo-desktop.jpg), $blue-red-promo;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.promo__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.promo__box--text {
+  width: 34.48%;
+}
+
+.promo__box--social {
+  align-self: flex-end;
+}
+
+.promo__location {
+  font-family: $ff-bebas-neue;
+  font-size: 49px;
+  line-height: 59px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.promo__services {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  font-size: 14px;
+  line-height: 21px;
+
+  li:not(:last-child) {
+    margin-bottom: 3px;
+  }
+}
+
+.promo__social-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li:not(:last-child) {
+    margin-bottom: 5px;
+  }
+
+  a {
+    display: block;
+    padding: 7px;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    text-align: center;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        color: darken($color-white, 40%);
+      }
+    }
+
+    &:active {
+      color: darken($color-white, 40%);
+    }
+  }
+}

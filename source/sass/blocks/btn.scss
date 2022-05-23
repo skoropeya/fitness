@@ -11,7 +11,7 @@
   font-weight: 700;
   font-size: 12px;
   line-height: 14px;
-  align-items: center;
+  text-align: center;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   background-color: $color-transparent;
@@ -19,6 +19,24 @@
   &--light {
     color: $color-white;
     border-color: $color-white;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        color: darken($color-white, 40%);
+        border-color: darken($color-white, 40%);
+      }
+    }
+
+    &:active {
+      color: darken($color-white, 40%);
+      border-color: darken($color-white, 40%);
+    }
+  }
+
+  &--big {
+    min-width: 230px;
+    border-width: 4px;
   }
 
   &:disabled {
