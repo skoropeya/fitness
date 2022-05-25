@@ -3,19 +3,19 @@
     margin-bottom: 12px;
   }
 
-  .gym__leading {
+  p {
+    font-weight: 300;
+    margin: 0;
+    margin-bottom: 8px;
+  }
+
+  p:first-child {
     font-size: 18px;
     line-height: 27px;
     font-weight: 400;
 
     margin: 0;
     margin-bottom: 38px;
-  }
-
-  p {
-    font-weight: 300;
-    margin: 0;
-    margin-bottom: 8px;
   }
 }
 
@@ -73,13 +73,13 @@
   .gym {
     margin-bottom: 10px;
 
-    .gym__leading {
-      margin-bottom: 34px;
+    p {
+      margin: 0 auto;
+      width: 74.1%;
     }
 
-    p {
-      margin-bottom: 0;
-      width: 74.1%;
+    p:first-child {
+      margin: 0 auto 34px auto;
     }
 
     .gym__only-desktop {
@@ -127,13 +127,14 @@
       margin-bottom: 10px;
     }
 
-    .gym__leading {
-      width: 100%;
-      margin-bottom: 23px;
+    p {
+      margin: 0;
+      width: 90%;
     }
 
-    p {
-      width: 90%;
+    p:first-child {
+      width: 100%;
+      margin-bottom: 23px;
     }
   }
 
