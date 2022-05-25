@@ -1,0 +1,33 @@
+.subscriptions {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-color: $color-ghost-white;
+  background-image: url("../img/back/weights.png");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: 120% 107%;
+
+  h2 {
+    margin-bottom: 40px;
+  }
+}
+
+.subscriptions__heading {
+  text-align: center;
+}
+
+@include vp-1199 {
+  .subscriptions {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-position: 120% 107%;
+  }
+}
+
+@include vp-767 {
+  .subscriptions {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-image: none;
+  }
+}

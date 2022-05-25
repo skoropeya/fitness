@@ -40,6 +40,10 @@
     padding: 19px;
   }
 
+  &--color {
+    padding: 23px;
+  }
+
   &:disabled {
     opacity: 0.5;
     pointer-events: none;

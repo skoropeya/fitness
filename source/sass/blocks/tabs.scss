@@ -1,0 +1,142 @@
+.tabs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tabs__list {
+  margin-top: 0;
+  margin-bottom: 50px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    width: 100%;
+    height: 2px;
+    background-color: $color-grey-tr20;
+  }
+}
+
+.tabs__item {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-right: 47px;
+  }
+}
+
+.tabs__item--active {
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background-color: $color-crimson;
+  }
+}
+
+.tabs__btn {
+  font-family: $ff-roboto-condensed;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  background-color: $color-transparent;
+  color: $color-sapphire-tr50;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  user-select: none;
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      color: $color-sapphire;
+    }
+  }
+
+  &:active {
+    color: $color-sapphire;
+  }
+}
+
+.tabs__content {
+  display: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+}
+
+.tabs__content--active {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+@include vp-1199 {
+  .tabs__list {
+    margin-bottom: 65px;
+
+    &::after {
+      bottom: -12px;
+    }
+  }
+
+  .tabs__item {
+    &:not(:last-child) {
+      margin-right: 47px;
+    }
+  }
+
+  .tabs__item--active {
+    &::after {
+      bottom: -12px;
+    }
+  }
+
+  .tabs__btn {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .tabs__content--active {
+    display: block;
+  }
+}
+
+@include vp-767 {
+  .tabs__list {
+    margin-bottom: 55px;
+
+    &::after {
+      bottom: -12px;
+    }
+  }
+
+  .tabs__item {
+    &:not(:last-child) {
+      margin-right: 47px;
+    }
+  }
+
+  .tabs__item--active {
+    &::after {
+      bottom: -12px;
+    }
+  }
+
+  .tabs__btn {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
