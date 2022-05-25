@@ -12,3 +12,9 @@
     padding: 0 15px;
   }
 }
+
+.container--fullscreen {
+  @include vp-767 {
+    padding: 0;
+  }
+}

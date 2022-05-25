@@ -37,6 +37,10 @@
   width: 56.9%;
 }
 
+.gym__img {
+  object-fit: cover;
+}
+
 .gym__box--video {
   display: flex;
   justify-content: center;
@@ -117,6 +121,8 @@
 
 @include vp-767 {
   .gym {
+    margin-bottom: 70px;
+
     h2 {
       margin-bottom: 10px;
     }
@@ -132,6 +138,7 @@
   }
 
   .gym__box--text {
+    padding: 0 15px;
     align-items: flex-start;
     text-align: left;
     margin-bottom: 35px;
@@ -141,11 +148,18 @@
     margin-bottom: 40px;
   }
 
-  // .gym__box--video {
-
-  // }
+  .gym__box--video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 52.18%;
+  }
 
   .gym__video {
+    position: absolute;
     top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 }
