@@ -15,6 +15,64 @@
     margin-top: 0;
     margin-bottom: 9px;
   }
+
+  p {
+    margin: 0;
+    margin-bottom: 65px;
+    text-align: center;
+    color: $color-chambray;
+  }
+
+  .card__price {
+    margin: 0;
+    margin-left: 5px;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 90px;
+    color: $color-egyptian-blue;
+    position: relative;
+  }
+
+  .card__price-shadow {
+    font-size: 100px;
+    line-height: 150px;
+    color: $color-whisper;
+    opacity: 0.48;
+    position: absolute;
+    top: -50px;
+    left: -20px;
+  }
+
+  .card__price-main {
+    position: relative;
+    z-index: 1;
+  }
+
+  .card__price-ruble {
+    color: $color-sapphire;
+  }
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover {
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-width: 7px;
+        border-style: solid;
+        border-image: $blue-red-border-card 10;
+      }
+
+      .card__btn {
+        color: $color-white;
+        border: none;
+        background-image: $blue-red-button;
+      }
+    }
+  }
 }
 
 .card__wrapper {
@@ -30,42 +88,8 @@
   align-items: center;
 }
 
-.card__box {
-  p {
-    margin: 0;
-    text-align: center;
-  }
-
-  p:first-child {
-    color: $color-chambray;
-  }
-
-  p:last-child {
-    font-weight: 700;
-    font-size: 60px;
-    line-height: 90px;
-
-    span:first-child {
-      color: $color-egyptian-blue;
-    }
-  }
-}
-
 .card__btn {
   margin: 0;
   margin-top: auto;
   width: 206px;
 }
-
-// @media (hover: hover), screen and (min-width: 0\0) {
-//   .card {
-//     border-width: 7px;
-//     border-style: solid;
-//     border-image: linear-gradient();
-//   }
-
-//   .card__btn {
-//     border: none;
-//     background-image: linear-gradient(97.05deg, #ED0233 17.6%, #003EB7 95.31%);
-//   }
-// }
