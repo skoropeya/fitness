@@ -118,18 +118,18 @@
 
             <div class="subscriptions__box tabs">
               <ul class="tabs__list">
-                <li class="tabs__item tabs__item--active">
-                  <button class="tabs__btn">1 месяц</button>
+                <li class="tabs__item" data-is-active="true">
+                  <button class="tabs__btn" data-time-period="1">1 месяц</button>
                 </li>
                 <li class="tabs__item">
-                  <button class="tabs__btn">6 месяцев</button>
+                  <button class="tabs__btn" data-time-period="6">6 месяцев</button>
                 </li>
                 <li class="tabs__item">
-                  <button class="tabs__btn">12 месяцев</button>
+                  <button class="tabs__btn" data-time-period="12">12 месяцев</button>
                 </li>
               </ul>
 
-              <ul class="tabs__content tabs__content--month tabs__content--active">
+              <ul class="tabs__content"  data-time-period="1" data-is-active="true">
                 <li class="tabs__content-item card">
                   <div class="card__wrapper">
                     <h3>С тренером</h3>
@@ -174,7 +174,7 @@
                 </li>
               </ul>
 
-              <ul class="tabs__content tabs__content--six-months">
+              <ul class="tabs__content" data-time-period="6">
                 <li class="tabs__content-item card">
                   <div class="card__wrapper">
                     <h3>С тренером</h3>
@@ -219,7 +219,7 @@
                 </li>
               </ul>
 
-              <ul class="tabs__content tabs__content--twelve-months">
+              <ul class="tabs__content" data-time-period="12">
                 <li class="tabs__content-item card">
                   <div class="card__wrapper">
                     <h3>С тренером</h3>
