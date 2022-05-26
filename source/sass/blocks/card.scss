@@ -93,3 +93,82 @@
   margin-top: auto;
   width: 206px;
 }
+
+@include vp-1199 {
+  .card {
+    max-width: none;
+    padding-bottom: 70%;
+
+    h3 {
+      margin-bottom: 10px;
+    }
+  }
+
+  .card__wrapper {
+    padding: 10% 15px;
+  }
+
+  .card__btn {
+    width: 80%;
+    margin-bottom: -4px;
+  }
+}
+
+@include vp-1023 {
+  .card {
+    padding-bottom: 101.36%;
+  }
+
+  .card__wrapper {
+    padding: 15.4% 15px;
+  }
+
+  .card__btn {
+    width: 50%;
+  }
+}
+
+@include vp-767 {
+  .card {
+    h3 {
+      font-size: 22px;
+      line-height: 24px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin-bottom: 55px;
+    }
+
+    .card__price {
+      font-size: 48px;
+      line-height: 72px;
+      margin-left: 8px;
+    }
+
+    .card__price-shadow {
+      font-size: 80px;
+      line-height: 120px;
+      top: -45px;
+    }
+  }
+
+  .card__btn {
+    width: 80%;
+    margin-bottom: 0;
+  }
+}
+
+@include vp-374 {
+  .card {
+    padding-bottom: 132.41%;
+  }
+
+  .card__wrapper {
+    padding: 17% 15px 20% 15px;
+  }
+
+  .card__btn {
+    width: 79.3%;
+  }
+}

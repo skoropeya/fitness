@@ -2,10 +2,24 @@
   padding-top: 120px;
   padding-bottom: 120px;
   background-color: $color-ghost-white;
-  background-image: url("../img/back/weights.png");
-  background-size: auto;
-  background-repeat: no-repeat;
-  background-position: 114% 115%;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -9%;
+    right: -10%;
+    width: 388px;
+    height: 341px;
+    background-image: url("../img/back/weights.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include retina {
+      background-image: url("../img/back/weights@2x.png");
+    }
+  }
 
   h2 {
     margin-bottom: 40px;
@@ -20,14 +34,33 @@
   .subscriptions {
     padding-top: 100px;
     padding-bottom: 100px;
-    background-position: 120% 107%;
+    margin-bottom: 100px;
+
+    &::after {
+      bottom: -3.5%;
+      right: -5%;
+      width: 340px;
+      height: 299px;
+    }
+
+    h2 {
+      margin-bottom: 32px;
+    }
   }
 }
 
 @include vp-767 {
   .subscriptions {
-    padding-top: 70px;
+    padding-top: 65px;
     padding-bottom: 70px;
-    background-image: none;
+    margin-bottom: 65px;
+
+    &::after {
+      display: none;
+    }
+
+    h2 {
+      margin-bottom: 25px;
+    }
   }
 }
