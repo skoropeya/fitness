@@ -1,0 +1,29 @@
+.super-games {
+  margin-bottom: 120px;
+}
+
+.super-games__box {
+  width: 43.1%;
+  padding: 7.5% 6.72%;
+
+  background-color: $color-torch-red;
+  color: $color-white;
+
+  h2 {
+    font-size: 90px;
+    line-height: 90px;
+    color: $color-white;
+  }
+
+  dl {
+    margin: 0;
+  }
+
+  dd {
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+}
