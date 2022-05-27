@@ -1,0 +1,27 @@
+.slider-btn {
+  background-color: $color-transparent;
+  color: $color-dark-grey;
+  width: 32px;
+  height: 48px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  user-select: none;
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      color: $color-sapphire;
+    }
+  }
+
+  &:active {
+    color: $color-sapphire;
+  }
+
+  &--next {
+    .slider-btn__icon {
+      transform: rotate(180deg);
+    }
+  }
+}
