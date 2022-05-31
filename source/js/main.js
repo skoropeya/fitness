@@ -2,6 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {setViewportWidth} from './utils/vw-fix';
 import {initVideo} from './modules/video';
 import {initTabs} from './modules/tabs';
+import {initSliderTrainers} from './modules/trainers';
 
 // ---------------------------------
 
@@ -20,6 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     initVideo();
     initTabs();
+    initSliderTrainers();
   });
 });
 

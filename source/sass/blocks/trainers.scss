@@ -6,35 +6,8 @@
   }
 }
 
-.trainers__box {
-  position: relative;
-}
-
 .trainers__list {
   margin: 0;
-  margin-right: -40px;
   padding: 0;
   list-style: none;
-
-  display: flex;
-  justify-content: space-between;
-}
-
-.trainers__item {
-  flex-shrink: 0;
-  margin-right: 40px;
-}
-
-.trainers__btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-
-  &--previous {
-    left: -64px;
-  }
-
-  &--next {
-    right: -64px;
-  }
 }
