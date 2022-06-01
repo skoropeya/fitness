@@ -2,7 +2,6 @@
   background-color: $color-sapphire;
   color: $color-white;
   max-width: 260px;
-  // width: 22.41%;
   position: relative;
   display: grid;
 
@@ -35,12 +34,10 @@
 .trainer-card__photo {
   max-width: none;
   position: absolute;
-  top: 0;
-  left: 0;
 }
 
 .trainer-card__description {
-  padding:  0 5% 5%;
+  padding: 0 5% 5%;
   margin-top: 75px;
   overflow-y: auto;
 
@@ -104,6 +101,119 @@
 
     .trainer-card__description {
       z-index: 4;
+    }
+  }
+}
+
+.trainer-card[data-is-touch="true"] {
+  .trainer-card__box-img {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: $color-sapphire-tr89;
+    }
+  }
+
+  .trainer-card__name {
+    margin-bottom: auto;
+    margin-top: 51px;
+  }
+
+  .trainer-card__description {
+    z-index: 4;
+  }
+}
+
+.trainer-card--pavlova {
+  .trainer-card__photo {
+    top: -13%;
+    left: 0;
+  }
+}
+
+.trainer-card--lavrov {
+  .trainer-card__photo {
+    top: -10%;
+    right: 0;
+  }
+}
+
+.trainer-card--pashkov {
+  .trainer-card__photo {
+    top: -6%;
+    left: 0;
+  }
+}
+
+.trainer-card--ketova {
+  .trainer-card__photo {
+    top: -16%;
+    left: -13%;
+  }
+}
+
+@include vp-1199 {
+  .trainer-card {
+    max-width: none;
+
+    h3 {
+      margin-left: 8px;
+    }
+  }
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    .trainer-card:hover {
+      .trainer-card__name {
+        margin-left: -8px;
+      }
+    }
+  }
+
+  .trainer-card[data-is-touch="true"] {
+    .trainer-card__name {
+      margin-left: -8px;
+    }
+  }
+}
+
+@include vp-767 {
+  .trainer-card {
+    h3 {
+      margin-left: 0;
+    }
+  }
+
+  .trainer-card__description {
+    p {
+      margin-bottom: 23px;
+    }
+
+    ul {
+      margin-left: 0;
+
+      li:not(:last-child) {
+        margin-bottom: 13px;
+      }
+    }
+  }
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    .trainer-card:hover {
+      .trainer-card__name {
+        margin-left: 0;
+        margin-top: 40px;
+      }
+    }
+  }
+
+  .trainer-card[data-is-touch="true"] {
+    .trainer-card__name {
+      margin-left: 0;
+      margin-top: 40px;
     }
   }
 }

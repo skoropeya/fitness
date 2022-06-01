@@ -74,3 +74,42 @@
     }
   }
 }
+
+@include vp-1199 {
+  .slider__container {
+    width: 83.48%;
+    margin: 0 auto;
+  }
+
+  .slider__track {
+    margin-right: -30px;
+  }
+
+  .slider__item {
+    margin-right: 30px;
+  }
+
+  .slider__btn {
+    &--previous {
+      left: -10px;
+    }
+
+    &--next {
+      right: -10px;
+    }
+  }
+}
+
+@include vp-767 {
+  .slider__container {
+    width: 77.94%;
+  }
+
+  .slider__track {
+    margin-right: 0;
+  }
+
+  .slider__item {
+    margin-right: 0;
+  }
+}

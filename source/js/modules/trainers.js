@@ -7,6 +7,7 @@ const images = container.querySelectorAll('.trainer-card__photo');
 const btnPrev = document.querySelector('.slider__btn--previous');
 const btnNext = document.querySelector('.slider__btn--next');
 
+const mediaQueryTouch = window.matchMedia('(hover: none) and (pointer: coarse)');
 let count = 0;
 
 const SLIDES_TO_SCROLL = 1;
@@ -25,17 +26,24 @@ images.forEach(function (image) {
 });
 
 const calculateImageSize = (baseItemWidth, itemWidth) => {
+  const coefficient = itemWidth / baseItemWidth;
+
   images.forEach(function (image, i) {
     const originalWidth = originalImages[i].originalWidth;
-    const newWidth = originalWidth / baseItemWidth * itemWidth;
+    let newWidth = coefficient * originalWidth;
+
+    if (newWidth < itemWidth) {
+      newWidth = itemWidth;
+    }
+
     setSize(image, `${newWidth}px`, 'auto');
   });
 };
 
-const calculateItemSize = (widthItem, coefficientCard) => {
+const calculateItemSize = (itemWidth, coefficientCard) => {
   items.forEach((item) => {
-    item.style.width = `${widthItem}px`;
-    item.style.height = `${widthItem * coefficientCard}px`;
+    item.style.width = `${itemWidth}px`;
+    item.style.height = `${itemWidth * coefficientCard}px`;
   });
 };
 
@@ -52,8 +60,8 @@ const getMarginRight = (elem) => {
   return +value.slice(0, -2);
 };
 
-const rollSlider = (countSlides, widthItem, itemMarginRight) => {
-  track.style.transform = `translateX(-${countSlides * (widthItem + itemMarginRight)}px)`;
+const rollSlider = (countSlides, itemWidth, itemMarginRight) => {
+  track.style.transform = `translateX(-${countSlides * (itemWidth + itemMarginRight)}px)`;
 };
 
 const setSlider = () => {
@@ -61,23 +69,21 @@ const setSlider = () => {
   const itemMarginRight = getMarginRight(items[0]);
   const slidesToShow = howManySlides(typeScreen);
   const coefficientCard = getCoefficientCard(typeScreen);
-
-  const itemWidth = items[0].clientWidth;
   const baseItemWidth = ITEM_PROPERTIES[typeScreen].width;
 
-  const widthContainer = container.clientWidth;
-  const widthItem = (widthContainer - itemMarginRight * (slidesToShow - 1)) / slidesToShow;
+  const widthContainer = container.offsetWidth;
+  const itemWidth = (widthContainer - itemMarginRight * (slidesToShow - 1)) / slidesToShow;
 
-  calculateItemSize(widthItem, coefficientCard);
+  calculateItemSize(itemWidth, coefficientCard);
   calculateImageSize(baseItemWidth, itemWidth);
-  rollSlider(count, widthItem, itemMarginRight);
+  rollSlider(count, itemWidth, itemMarginRight);
 
   btnNext.addEventListener('click', function () {
     count = count + SLIDES_TO_SCROLL;
     if (count > (items.length - slidesToShow)) {
       count = 0;
     }
-    rollSlider(count, widthItem, itemMarginRight);
+    rollSlider(count, itemWidth, itemMarginRight);
   });
 
   btnPrev.addEventListener('click', function () {
@@ -85,8 +91,62 @@ const setSlider = () => {
     if (count < 0) {
       count = items.length - slidesToShow;
     }
-    rollSlider(count, widthItem, itemMarginRight);
+    rollSlider(count, itemWidth, itemMarginRight);
   });
+
+  if (mediaQueryTouch.matches) {
+    let x1;
+    let y1;
+
+    const onTouchStart = (evt) => {
+      x1 = evt.touches[0].clientX;
+      y1 = evt.touches[0].clientY;
+
+      if (evt.target.matches('.slider__item img') || evt.target.matches('.slider__item h3')) {
+        items.forEach((item) => {
+          if (evt.target.closest('.slider__item') === item) {
+            item.dataset.isTouch = 'true';
+          } else {
+            item.dataset.isTouch = 'false';
+          }
+        });
+      }
+    };
+
+    const onTouchMove = (evt) => {
+      if (!x1 || !y1) {
+        return false;
+      }
+
+      let x2 = evt.touches[0].clientX;
+      let y2 = evt.touches[0].clientY;
+      let xDifference = x2 - x1;
+      let yDifference = y2 - y1;
+
+      if (Math.abs(xDifference) > Math.abs(yDifference)) {
+        if (xDifference > 0) {
+          count = count - SLIDES_TO_SCROLL;
+          if (count < 0) {
+            count = items.length - slidesToShow;
+          }
+          rollSlider(count, itemWidth, itemMarginRight);
+        } else {
+          count = count + SLIDES_TO_SCROLL;
+          if (count > (items.length - slidesToShow)) {
+            count = 0;
+          }
+          rollSlider(count, itemWidth, itemMarginRight);
+        }
+      }
+
+      x1 = 0;
+      y1 = 0;
+      return true;
+    };
+
+    container.addEventListener('touchstart', onTouchStart, false);
+    container.addEventListener('touchmove', onTouchMove, false);
+  }
 };
 
 const initSliderTrainers = () => {
