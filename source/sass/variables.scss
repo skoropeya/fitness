@@ -14,6 +14,7 @@ $color-sapphire:        #102654;
 $color-chambray:        #495a7d;
 $color-ghost-white:     #f8f9fc;
 $color-egyptian-blue:   #103aae;
+$color-persian-blue:    #2e35ac;
 $color-torch-red:       #ed0233;
 $color-crimson:         #d10a42;
 $color-smalt:           #00359f;
@@ -32,6 +33,7 @@ $color-dark-cerulean-tr50:     rgba(20, 54, 122, 0.5);
 $color-sapphire-tr50:          rgba(16, 38, 84, 0.5);
 $color-sapphire-tr89:          rgba(16, 38, 84, 0.89);
 $color-grey-tr20:              rgba(120, 120, 120, 0.2);
+$color-crimson-tr20:           rgba(209, 10, 66, 0.2);
 
 // Gradient
 
@@ -47,6 +49,9 @@ $blue-red-border-card:   linear-gradient(to bottom right, $color-crimson, $color
 
 // цветная кнопка
 $blue-red-button: linear-gradient(97.05deg, $color-torch-red 17.6%, $color-cobalt 95.31%);
+
+// цвет текста
+$blue-red-text: linear-gradient(142.51deg, #d10a42 0%, #0041ca 87.33%);
 
 // Typography
 // ---------------------------------
