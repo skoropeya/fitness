@@ -299,7 +299,7 @@
         <section class="trainers">
           <div class="container">
             <h2 class="trainers__heading heading">Тренеры</h2>
-            <div class="trainers__wrrapper slider">
+            <div class="trainers__wrrapper slider slider--trainers" data-is-adaptive="true" id="slider-trainers">
               <div class="trainers__box slider__container">
                 <ul class="trainers__list slider__track">
                   <li class="trainers__item slider__item trainer-card trainer-card--pavlova">
@@ -585,49 +585,52 @@
         <section class="reviews">
           <div class="container">
             <h2 class="reviews__heading heading">Отзывы</h2>
+            <div class="reviews__wrapper slider slider--reviews" data-is-adaptive="false" id="slider-reviews">
+              <div class="reviews__box slider__container">
+                <ul class="reviews__list slider__track">
+                  <li class="reviews__item slider__item">
+                    <blockquote>
+                      <div class="reviews__photo">
+                        <!-- 1х: 124px x 174px; 2x: 248px x 348px -->
+                        <picture>
+                          <source type="image/webp" srcset="img/content/reviews/user-avatar.webp 1x, img/content/reviews/user-avatar@2x.webp 2x">
+                          <img class="reviews__author-photo" src="img/content/reviews/user-avatar.jpg" srcset="img/reviews/user-avatar@2x.jpg 2x" width="124" height="174" alt="Аватар автора отзыва">
+                        </picture>
+                      </div>
+                      <cite class="reviews__author-name">Анна Орлова</cite>
+                      <p class="reviews__text">&laquo;Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;</p>
+                    </blockquote>
+                  </li>
 
-            <ul class="reviews__list">
-              <li class="reviews__item">
-                <blockquote>
-                  <div class="reviews__photo">
-                    <!-- 1х: 124px x 174px; 2x: 248px x 348px -->
-                    <picture>
-                      <source type="image/webp" srcset="img/content/reviews/user-avatar.webp 1x, img/content/reviews/user-avatar@2x.webp 2x">
-                      <img class="reviews__author-photo" src="img/content/reviews/user-avatar.jpg" srcset="img/reviews/user-avatar@2x.jpg 2x" width="124" height="174" alt="Аватар автора отзыва">
-                    </picture>
-                  </div>
-                  <cite class="reviews__author-name">Анна Орлова</cite>
-                  <p class="reviews__text">&laquo;Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;</p>
-                </blockquote>
-              </li>
+                  <li class="reviews__item slider__item">
+                    <blockquote>
+                      <div class="reviews__photo">
+                        <!-- 1х: 124px x 174px; 2x: 248px x 348px -->
+                        <picture>
+                          <source type="image/webp" srcset="img/content/reviews/user-avatar.webp 1x, img/content/reviews/user-avatar@2x.webp 2x">
+                          <img class="reviews__author-photo" src="img/content/reviews/user-avatar.jpg" srcset="img/reviews/user-avatar@2x.jpg 2x" width="124" height="174" alt="Аватар автора отзыва">
+                        </picture>
+                      </div>
+                      <cite class="reviews__author-name">Анна Орлова2</cite>
+                      <p class="reviews__text">&laquo;Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;</p>
+                    </blockquote>
+                  </li>
+                </ul>
+              </div>
 
-              <li class="reviews__item">
-                <blockquote>
-                  <div class="reviews__photo">
-                    <!-- 1х: 124px x 174px; 2x: 248px x 348px -->
-                    <picture>
-                      <source type="image/webp" srcset="img/content/reviews/user-avatar.webp 1x, img/content/reviews/user-avatar@2x.webp 2x">
-                      <img class="reviews__author-photo" src="img/content/reviews/user-avatar.jpg" srcset="img/reviews/user-avatar@2x.jpg 2x" width="124" height="174" alt="Аватар автора отзыва">
-                    </picture>
-                  </div>
-                  <cite class="reviews__author-name">Анна Орлова2</cite>
-                  <p class="reviews__text">&laquo;Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;</p>
-                </blockquote>
-              </li>
-            </ul>
-
-            <button class="reviews__btn reviews__btn--previous slider-btn slider-btn--previous" type="button">
-              <span class="visually-hidden">Предыдущий слайд</span>
-              <svg class="slider-btn__icon" width="16" height="32">
-                <use xlink:href="img/sprite_auto.svg#arrow"></use>
-              </svg>
-            </button>
-            <button class="reviews__btn reviews__btn--next slider-btn slider-btn--next" type="button">
-              <span class="visually-hidden">Следующий слайд</span>
-              <svg class="slider-btn__icon" width="16" height="32">
-                <use xlink:href="img/sprite_auto.svg#arrow"></use>
-              </svg>
-            </button>
+              <button class="slider__btn slider__btn--previous" type="button">
+                <span class="visually-hidden">Предыдущий слайд</span>
+                <svg class="slider__btn-icon" width="16" height="32">
+                  <use xlink:href="img/sprite_auto.svg#arrow"></use>
+                </svg>
+              </button>
+              <button class="slider__btn slider__btn--next" type="button">
+                <span class="visually-hidden">Следующий слайд</span>
+                <svg class="slider__btn-icon" width="16" height="32">
+                  <use xlink:href="img/sprite_auto.svg#arrow"></use>
+                </svg>
+              </button>
+            </div>
           </div>
         </section>
 
