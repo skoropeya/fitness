@@ -3,6 +3,7 @@ import {setViewportWidth} from './utils/vw-fix';
 import {initVideo} from './modules/video';
 import {initTabs} from './modules/tabs';
 import {initSliders} from './modules/sliders';
+import {setMask} from './modules/mask-phone';
 
 // ---------------------------------
 
@@ -22,6 +23,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initVideo();
     initTabs();
     initSliders();
+    setMask();
   });
 });
 

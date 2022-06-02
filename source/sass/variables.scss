@@ -27,6 +27,7 @@ $color-venetian-red:    #b80027;
 $color-whisper:         #e8e8e8;
 $color-dark-grey:       #afafaf;
 $color-spindle:         #b6bdcc;
+$color-light-slate-grey:#74819c;
 // $color-grey:    #787878;
 
 $color-dark-cerulean-tr50:     rgba(20, 54, 122, 0.5);
@@ -52,6 +53,9 @@ $blue-red-button: linear-gradient(97.05deg, $color-torch-red 17.6%, $color-cobal
 
 // цвет текста
 $blue-red-text: linear-gradient(142.51deg, #d10a42 0%, #0041ca 87.33%);
+
+// фон блока с формой и контактами
+$sapphire-white-back: linear-gradient(to right, $color-sapphire 50%, $color-white 50%);
 
 // Typography
 // ---------------------------------

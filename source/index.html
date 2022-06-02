@@ -634,58 +634,63 @@
           </div>
         </section>
 
-        <section class="free-lesson">
+        <div class="page-main__box">
           <div class="container">
-            <h2 class="free-lesson__heading heading heading--light">Бесплатное занятие</h2>
+            <div class="page-main__wrapper">
+              <section class="request-lesson">
+                <h2 class="request-lesson__heading heading heading--light">Бесплатное занятие</h2>
 
-            <form class="free-lesson__form form" method="post" action="https://echo.htmlacademy.ru/">
-              <label class="visually-hidden" for="name">Укажите имя</label>
-              <input class="form__input form__input--name" type="text" name="name" id="name" placeholder="Имя" required>
+                <form class="request-lesson__form form" method="post" action="https://echo.htmlacademy.ru/">
+                  <div class="form__box">
+                    <label class="visually-hidden" for="name">Укажите имя</label>
+                    <input class="form__input form__input--name" type="text" name="name" id="name" placeholder="Имя" required>
+                  </div>
 
-              <label class="visually-hidden" for="phone">Укажите телефон для связи</label>
-              <input class="form__input form__input--phone" type="tel" name="phone" id="phone" placeholder="Телефон" required data-phone-pattern = "+7 (___) _______">
+                  <div class="form__box">
+                    <label class="visually-hidden" for="phone">Укажите телефон для связи</label>
+                    <input class="form__input form__input--phone" type="tel" name="phone" id="phone" placeholder="Телефон" required data-phone-pattern = "+7 (___) _______">
+                  </div>
 
-              <button class="form__btn btn btn--light" type="submit">отправить</button>
-            </form>
+                  <button class="form__btn btn btn--light" type="submit">отправить</button>
+                </form>
+              </section>
+
+              <section class="contacts">
+                <h2 class="contacts__heading heading">Контакты</h2>
+
+                <div class="contacts__box">
+                  <dl class="contacts__list contacts__list--left">
+                    <dt>Адрес:</dt>
+                    <dd>
+                      <address>г. Омск, ул. 60 лет Октября, 7</address>
+                    </dd>
+
+                    <dt>График работы:</dt>
+                    <dd>Пн-Вс: с 8:00 до 22:00</dd>
+                  </dl>
+
+                  <dl class="contacts__list contacts__list--right">
+                    <dt>Телефон:</dt>
+                    <dd>
+                      <a href="tel:+78005555555">8-800-555-55-55</a>
+                    </dd>
+
+                    <dt>Email:</dt>
+                    <dd>
+                      <a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
+                    </dd>
+                  </dl>
+                </div>
+              </section>
+            </div>
           </div>
-        </section>
-
-        <section class="contacts">
-          <div class="container">
-            <h2 class="contacts__heading heading">Контакты</h2>
-
-            <dl class="contacts__list">
-              <div class="contacts__box">
-                <dt>Адрес:</dt>
-                <dd>
-                  <address>г. Омск, ул. 60 лет Октября, 7</address>
-                </dd>
-
-                <dt>График работы:</dt>
-                <dd>Пн-Вс: с 8:00 до 22:00</dd>
-              </div>
-
-              <div class="contacts__box">
-                <dt>Телефон:</dt>
-                <dd>
-                  <a href="tel:+78005555555">8-800-555-55-55</a>
-                </dd>
-
-                <dt>Email:</dt>
-                <dd>
-                  <a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
-                </dd>
-              </div>
-            </dl>
-          </div>
-        </section>
-
+        </div>
       </main>
 
       <footer class="page-footer">
         <div class="container">
           <div class="page-footer__box page-footer__box--logo">
-            <a class="page-header__logo logotype">
+            <a class="page-footer__logo logotype">
               <svg class="logotype__img" width="89" height="20">
                 <use xlink:href="img/sprite_auto.svg#logo"></use>
               </svg>
