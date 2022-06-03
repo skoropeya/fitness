@@ -265,7 +265,7 @@
   .features {
     padding-top: 67px;
     padding-bottom: 67px;
-    margin-bottom: 70px;
+    margin-bottom: 65px;
 
     h2 {
       margin-bottom: 32px;
@@ -289,12 +289,13 @@
 
   .features__item {
     padding: 0 15px;
+    margin-bottom: 21px;
     flex-direction: column-reverse;
     align-items: center;
     text-align: center;
 
-    &:not(:last-child) {
-      margin-bottom: 21px;
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 
