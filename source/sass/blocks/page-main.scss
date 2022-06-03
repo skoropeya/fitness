@@ -24,6 +24,7 @@
   .page-main__box {
     background: $color-white;
     padding: 0;
+    margin-bottom: 40px;
     position: static;
 
     &::before {
@@ -37,5 +38,7 @@
 }
 
 @include vp-767 {
-
+  .page-main__box {
+    margin-bottom: 60px;
+  }
 }
