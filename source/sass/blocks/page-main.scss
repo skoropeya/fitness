@@ -2,9 +2,40 @@
   background: $sapphire-white-back;
   padding-top: 65px;
   padding-bottom: 48px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 1px;
+    width: 50%;
+    background-color: $color-light-slate-grey;
+  }
 }
 
 .page-main__wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+@include vp-1199 {
+  .page-main__box {
+    background: $color-white;
+    padding: 0;
+    position: static;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .page-main__wrapper {
+    display: block;
+  }
+}
+
+@include vp-767 {
+
 }

@@ -58,3 +58,24 @@
     grid-row: 2 / 3;
   }
 }
+
+@include vp-1199 {
+  .form {
+    column-gap: 60px;
+  }
+}
+
+@include vp-767 {
+  .form {
+    display: block;
+
+    .form__box {
+      margin-bottom: 30px;
+    }
+
+    button[type="submit"] {
+      margin-top: 10px;
+      width: 100%;
+    }
+  }
+}

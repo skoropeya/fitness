@@ -10,3 +10,41 @@
 .request-lesson__form {
   width: 70.69%;
 }
+
+@include vp-1199 {
+  .request-lesson {
+    padding: 65px 45px 70px;
+    margin-bottom: 65px;
+
+    h2 {
+      margin-bottom: 34px;
+    }
+  }
+
+  .request-lesson__wrapper {
+    padding-left: 13%;
+  }
+
+  .request-lesson__form {
+    width: 80%;
+  }
+}
+
+@include vp-767 {
+  .request-lesson {
+    padding: 65px 15px 70px;
+    // margin-bottom: 65px;
+
+    h2 {
+      margin-bottom: 35px;
+    }
+  }
+
+  .request-lesson__wrapper {
+    padding-left: 0;
+  }
+
+  .request-lesson__form {
+    width: 100%;
+  }
+}
