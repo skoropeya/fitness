@@ -162,13 +162,21 @@
     bottom: 0;
     right: 0;
     width: 50%;
-    background-image: url("../img/back/promotion-desktop.jpg");
+
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+  }
+}
 
-    @include retina {
-      background-image: url("../img/back/promotion-desktop@2x.jpg");
+@include vp-1200 {
+  .promotion__item--hit {
+    &::after {
+      background-image: url("../img/back/promotion-desktop.jpg");
+
+      @include retina {
+        background-image: url("../img/back/promotion-desktop@2x.jpg");
+      }
     }
   }
 }
@@ -269,6 +277,14 @@
     .promotion__btn {
       align-self: flex-start;
     }
+
+    &::after {
+      background-image: url("../img/back/promotion-mobile.jpg");
+
+      @include retina {
+        background-image: url("../img/back/promotion-mobile@2x.jpg");
+      }
+    }
   }
 }
 
@@ -309,11 +325,6 @@
       bottom: 0;
       left: 0;
       right: 0;
-      background-image: url("../img/back/promotion-mobile.jpg");
-
-      @include retina {
-        background-image: url("../img/back/promotion-mobile@2x.jpg");
-      }
     }
   }
 }

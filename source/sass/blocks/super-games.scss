@@ -94,13 +94,18 @@
 
 .super-games__box--decor {
   width: 100%;
-  background-image: url("../img/back/super-games-desktop.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
 
-  @include retina {
-    background-image: url("../img/back/super-games-desktop@2x.jpg");
+@include vp-1200 {
+  .super-games__box--decor {
+    background-image: url("../img/back/super-games-desktop.jpg");
+
+    @include retina {
+      background-image: url("../img/back/super-games-desktop@2x.jpg");
+    }
   }
 }
 

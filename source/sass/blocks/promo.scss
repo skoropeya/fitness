@@ -5,15 +5,8 @@
   background-color: $color-pompadour;
   color: $color-white;
 
-  background-image: url("../img/back/promo-desktop.jpg"), $blue-red-promo-desktop;
-  background-size: auto;
   background-repeat: no-repeat;
-  background-position: 60% 50%;
-
-  @include retina {
-    background-image: url("../img/back/promo-desktop@2x.jpg"), $blue-red-promo-desktop;
-    background-size: 500px auto, 100%;
-  }
+  background-size: auto;
 }
 
 .promo__wrapper {
@@ -108,9 +101,15 @@
   }
 }
 
-@include vp-1619 {
+@include vp-1200 {
   .promo {
+    background-image: url("../img/back/promo-desktop.jpg"), $blue-red-promo-desktop;
     background-position: 65% 50%;
+
+    @include retina {
+      background-image: url("../img/back/promo-desktop@2x.jpg"), $blue-red-promo-desktop;
+      background-size: 500px auto, 100%;
+    }
   }
 }
 
@@ -181,6 +180,7 @@
     margin-bottom: 65px;
 
     background-image: $blue-red-promo-mobile;
+    background-size: auto;
   }
 
   .promo__box--text {
