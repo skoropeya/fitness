@@ -802,10 +802,8 @@ button,
   margin-bottom: 120px;
   background-color: #831243;
   color: #ffffff;
-  background-image: url("../img/back/promo-desktop.jpg"), conic-gradient(from 130.31deg at 16.03% 39.06%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
-  background-size: auto;
   background-repeat: no-repeat;
-  background-position: 60% 50%;
+  background-size: auto;
 }
 
 .promo__wrapper {
@@ -1291,7 +1289,6 @@ button,
 
 .super-games__box--decor {
   width: 100%;
-  background-image: url("../img/back/super-games-desktop.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1873,7 +1870,6 @@ button,
   bottom: 0;
   right: 0;
   width: 50%;
-  background-image: url("../img/back/promotion-desktop.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -2373,9 +2369,33 @@ button,
   }
 }
 
-@media (max-width: 1619px) {
+@media (min-width: 1200px) {
   .promo {
+    background-image: url("../img/back/promo-desktop.jpg"), conic-gradient(from 130.31deg at 16.03% 39.06%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
     background-position: 65% 50%;
+  }
+
+  .super-games__box--decor {
+    background-image: url("../img/back/super-games-desktop.jpg");
+  }
+
+  .promotion__item--hit::after {
+    background-image: url("../img/back/promotion-desktop.jpg");
+  }
+}
+
+@media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1200px) and (-o-min-device-pixel-ratio: 3/2), (min-width: 1200px) and (min-resolution: 144dpi), (min-width: 1200px) and (min-resolution: 1.5dppx) {
+  .promo {
+    background-image: url("../img/back/promo-desktop@2x.jpg"), conic-gradient(from 130.31deg at 16.03% 39.06%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
+    background-size: 500px auto, 100%;
+  }
+
+  .super-games__box--decor {
+    background-image: url("../img/back/super-games-desktop@2x.jpg");
+  }
+
+  .promotion__item--hit::after {
+    background-image: url("../img/back/promotion-desktop@2x.jpg");
   }
 }
 
@@ -3080,6 +3100,7 @@ button,
     padding-bottom: 69px;
     margin-bottom: 65px;
     background-image: conic-gradient(from 171.43deg at 35.31% 34.22%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
+    background-size: auto;
   }
 
   .promo__box--text {
@@ -3448,6 +3469,10 @@ button,
     align-self: flex-start;
   }
 
+  .promotion__item--hit::after {
+    background-image: url("../img/back/promotion-mobile.jpg");
+  }
+
   .reviews {
     margin-bottom: 70px;
   }
@@ -3651,6 +3676,10 @@ button,
   .super-games__box--decor {
     background-image: url("../img/back/super-games-mobile@2x.jpg");
   }
+
+  .promotion__item--hit::after {
+    background-image: url("../img/back/promotion-mobile@2x.jpg");
+  }
 }
 
 @media (max-width: 674px) {
@@ -3709,13 +3738,6 @@ button,
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: url("../img/back/promotion-mobile.jpg");
-  }
-}
-
-@media (max-width: 539px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 539px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 539px) and (min-resolution: 144dpi), (max-width: 539px) and (min-resolution: 1.5dppx) {
-  .promotion__item--hit::after {
-    background-image: url("../img/back/promotion-mobile@2x.jpg");
   }
 }
 
@@ -3757,20 +3779,7 @@ button,
 }
 
 @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-  .promo {
-    background-image: url("../img/back/promo-desktop@2x.jpg"), conic-gradient(from 130.31deg at 16.03% 39.06%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
-    background-size: 500px auto, 100%;
-  }
-
   .subscriptions::after {
     background-image: url("../img/back/weights@2x.png");
-  }
-
-  .super-games__box--decor {
-    background-image: url("../img/back/super-games-desktop@2x.jpg");
-  }
-
-  .promotion__item--hit::after {
-    background-image: url("../img/back/promotion-desktop@2x.jpg");
   }
 }
