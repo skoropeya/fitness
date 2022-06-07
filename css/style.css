@@ -746,6 +746,10 @@ button,
   -ms-user-select: none;
   user-select: none;
   background-color: rgba(255, 255, 255, 0);
+  background-image: url("../img/svg/play.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -755,9 +759,8 @@ button,
   transform: translate(-50%, -50%);
 }
 
-.video__icon {
-  width: 100px;
-  height: 100px;
+.video:focus-within .video__overlay {
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .page-header {
@@ -1154,6 +1157,27 @@ button,
   position: static;
 }
 
+.card:focus-within::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-width: 7px;
+  border-style: solid;
+  -o-border-image: -o-linear-gradient(top left, #d10a42, #00359f) 10;
+  border-image: -webkit-gradient(linear, left top, right bottom, from(#d10a42), to(#00359f)) 10;
+  border-image: linear-gradient(to bottom right, #d10a42, #00359f) 10;
+}
+
+.card:focus-within .card__btn {
+  color: #ffffff;
+  border: none;
+  background-image: -o-linear-gradient(352.95deg, #ed0233 17.6%, #003eb7 95.31%);
+  background-image: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+}
+
 .card__wrapper {
   position: absolute;
   top: 0;
@@ -1476,6 +1500,25 @@ button,
 
 .trainer-card__description ul li:not(:last-child) {
   margin-bottom: 12px;
+}
+
+.trainer-card:focus .trainer-card__box-img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(16, 38, 84, 0.89);
+}
+
+.trainer-card:focus .trainer-card__name {
+  margin-bottom: auto;
+  margin-top: 51px;
+}
+
+.trainer-card:focus .trainer-card__description {
+  z-index: 4;
 }
 
 .trainer-card[data-is-touch="true"] .trainer-card__box-img::after {
@@ -1966,7 +2009,7 @@ button,
   background: -o-linear-gradient(left, #102654 50%, #ffffff 50%);
   background: linear-gradient(to right, #102654 50%, #ffffff 50%);
   padding-top: 65px;
-  padding-bottom: 48px;
+  padding-bottom: 64px;
   position: relative;
 }
 
@@ -2111,6 +2154,10 @@ button,
   line-height: 21px;
 }
 
+.contacts dd:last-child {
+  margin-bottom: 0;
+}
+
 .contacts address {
   font-style: normal;
 }
@@ -2120,6 +2167,7 @@ button,
 }
 
 .contacts .contacts__list--left {
+  width: 56%;
   margin-left: 4px;
   position: relative;
 }
@@ -2128,10 +2176,14 @@ button,
   content: "";
   position: absolute;
   top: 6px;
-  bottom: 20px;
-  right: -36%;
+  bottom: 5px;
+  right: -5px;
   width: 1px;
   background-color: #74819c;
+}
+
+.contacts .contacts__list--right {
+  padding-left: 15px;
 }
 
 .contacts__box {
@@ -2265,8 +2317,7 @@ button,
     color: #999999;
   }
 
-  .video:hover .video__overlay,
-  .video:focus-within .video__overlay {
+  .video:hover .video__overlay {
     background-color: rgba(255, 255, 255, 0);
   }
 
@@ -2285,8 +2336,7 @@ button,
     color: #102654;
   }
 
-  .card:hover::after,
-  .card:focus-within::after {
+  .card:hover::after {
     content: "";
     position: absolute;
     top: 0;
@@ -2300,8 +2350,7 @@ button,
     border-image: linear-gradient(to bottom right, #d10a42, #00359f) 10;
   }
 
-  .card:hover .card__btn,
-  .card:focus-within .card__btn {
+  .card:hover .card__btn {
     color: #ffffff;
     border: none;
     background-image: -o-linear-gradient(352.95deg, #ed0233 17.6%, #003eb7 95.31%);
@@ -2420,10 +2469,6 @@ button,
   .gym__video {
     left: 10%;
   }
-
-  .contacts .contacts__list--left::after {
-    right: -28%;
-  }
 }
 
 @media (max-width: 1199px) {
@@ -2455,11 +2500,6 @@ button,
   }
 
   .video__btn {
-    width: 73px;
-    height: 73px;
-  }
-
-  .video__icon {
     width: 73px;
     height: 73px;
   }
@@ -2921,7 +2961,7 @@ button,
   .page-main__box {
     background: #ffffff;
     padding: 0;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     position: static;
   }
 
@@ -2977,13 +3017,18 @@ button,
   }
 
   .contacts .contacts__list--left {
+    width: 37%;
     margin-left: 0;
     margin-right: 16.4%;
   }
 
   .contacts .contacts__list--left::after {
-    bottom: 25px;
-    right: -23%;
+    bottom: 10px;
+    right: -49px;
+  }
+
+  .contacts .contacts__list--right {
+    padding-left: 0;
   }
 
   .contacts__wrapper {
@@ -3215,6 +3260,10 @@ button,
     gap: 35px;
   }
 
+  .card {
+    padding-bottom: 50%;
+  }
+
   .card h3 {
     font-size: 22px;
     line-height: 24px;
@@ -3222,7 +3271,7 @@ button,
   }
 
   .card p {
-    margin-bottom: 55px;
+    margin-bottom: 45px;
   }
 
   .card p:nth-child(3) {
@@ -3240,6 +3289,10 @@ button,
   .card span:last-child span {
     font-size: 48px;
     line-height: 72px;
+  }
+
+  .card__wrapper {
+    padding: 5% 15px;
   }
 
   .card__btn {
@@ -3550,7 +3603,7 @@ button,
   }
 
   .page-main__box {
-    margin-bottom: 60px;
+    margin-bottom: 61px;
   }
 
   .request-lesson {
@@ -3597,7 +3650,9 @@ button,
   }
 
   .contacts .contacts__list--left {
+    width: auto;
     margin-right: 0;
+    margin-bottom: 19px;
     position: static;
   }
 
@@ -3694,6 +3749,10 @@ button,
 }
 
 @media (max-width: 674px) {
+  .card {
+    padding-bottom: 60%;
+  }
+
   .super-games__box--text {
     -ms-grid-columns: 200px auto;
     grid-template-columns: 200px auto;
@@ -3718,6 +3777,10 @@ button,
 }
 
 @media (max-width: 539px) {
+  .card {
+    padding-bottom: 85%;
+  }
+
   .promotion__item--hit h3 {
     text-align: center;
   }
@@ -3760,6 +3823,10 @@ button,
 
   .card {
     padding-bottom: 132.41%;
+  }
+
+  .card p {
+    margin-bottom: 55px;
   }
 
   .card__wrapper {
