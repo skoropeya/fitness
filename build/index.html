@@ -641,19 +641,21 @@
                 <div class="request-lesson__wrapper">
                   <h2 class="request-lesson__heading heading heading--light">Бесплатное занятие</h2>
 
-                  <form class="request-lesson__form form" method="post" action="https://echo.htmlacademy.ru/">
-                    <div class="form__box">
-                      <label class="visually-hidden" for="name">Укажите имя</label>
-                      <input class="form__input form__input--name" type="text" name="name" id="name" placeholder="Имя" required>
-                    </div>
+                  <div class="request-lesson__form form">
+                    <form class="form__form" method="post" action="https://echo.htmlacademy.ru/">
+                      <div class="form__box">
+                        <label class="visually-hidden" for="name">Укажите имя</label>
+                        <input class="form__input form__input--name" type="text" name="name" id="name" placeholder="Имя" required>
+                      </div>
 
-                    <div class="form__box">
-                      <label class="visually-hidden" for="phone">Укажите телефон для связи</label>
-                      <input class="form__input form__input--phone" type="tel" name="phone" id="phone" placeholder="Телефон" required data-phone-pattern = "+7 (___) _______">
-                    </div>
+                      <div class="form__box">
+                        <label class="visually-hidden" for="phone">Укажите телефон для связи</label>
+                        <input class="form__input form__input--phone" type="tel" name="phone" id="phone" placeholder="Телефон" required data-phone-pattern = "+7 (___) _______">
+                      </div>
 
-                    <button class="form__btn btn btn--light" type="submit">отправить</button>
-                  </form>
+                      <button class="form__btn btn btn--light" type="submit">отправить</button>
+                    </form>
+                  </div>
                 </div>
               </section>
 
