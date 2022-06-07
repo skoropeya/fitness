@@ -80,6 +80,29 @@
   }
 }
 
+.trainer-card:focus {
+  .trainer-card__box-img {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: $color-sapphire-tr89;
+    }
+  }
+
+  .trainer-card__name {
+    margin-bottom: auto;
+    margin-top: 51px;
+  }
+
+  .trainer-card__description {
+    z-index: 4;
+  }
+}
+
 @media (hover: hover), screen and (min-width: 0\0) {
   .trainer-card:hover {
     .trainer-card__box-img {

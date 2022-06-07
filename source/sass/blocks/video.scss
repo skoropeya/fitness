@@ -36,6 +36,11 @@
   user-select: none;
   background-color: $color-transparent;
 
+  background-image: url("../img/svg/play.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
   position: absolute;
   top: 50%;
   left: 50%;
@@ -43,25 +48,18 @@
   transform: translate(-50%, -50%);
 }
 
-.video__icon {
-  width: 100px;
-  height: 100px;
+.video:focus-within .video__overlay {
+  background-color: $color-transparent;
 }
 
 @media (hover: hover), screen and (min-width: 0\0) {
-  .video:hover .video__overlay,
-  .video:focus-within .video__overlay {
+  .video:hover .video__overlay {
     background-color: $color-transparent;
   }
 }
 
 @include vp-1199 {
   .video__btn {
-    width: 73px;
-    height: 73px;
-  }
-
-  .video__icon {
     width: 73px;
     height: 73px;
   }

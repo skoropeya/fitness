@@ -22,6 +22,10 @@
     margin-bottom: 16px;
     font-size: 14px;
     line-height: 21px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   address {
@@ -42,6 +46,7 @@
   }
 
   .contacts__list--left {
+    width: 56%;
     margin-left: 4px;
     position: relative;
 
@@ -49,27 +54,21 @@
       content: "";
       position: absolute;
       top: 6px;
-      bottom: 20px;
-      right: -36%;
+      bottom: 5px;
+      right: -5px;
       width: 1px;
       background-color: $color-light-slate-grey;
     }
+  }
+
+  .contacts__list--right {
+    padding-left: 15px;
   }
 }
 
 .contacts__box {
   display: flex;
   justify-content: space-between;
-}
-
-@include vp-1279 {
-  .contacts {
-    .contacts__list--left {
-      &::after {
-        right: -28%;
-      }
-    }
-  }
 }
 
 @include vp-1199 {
@@ -93,13 +92,18 @@
     }
 
     .contacts__list--left {
+      width: 37%;
       margin-left: 0;
       margin-right: 16.4%;
 
       &::after {
-        bottom: 25px;
-        right: -23%;
+        bottom: 10px;
+        right: -49px;
       }
+    }
+
+    .contacts__list--right {
+      padding-left: 0;
     }
   }
 
@@ -127,7 +131,9 @@
     }
 
     .contacts__list--left {
+      width: auto;
       margin-right: 0;
+      margin-bottom: 19px;
       position: static;
 
       &::after {
