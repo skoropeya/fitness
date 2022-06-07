@@ -1,4 +1,4 @@
-.form {
+.form form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
@@ -60,13 +60,13 @@
 }
 
 @include vp-1199 {
-  .form {
+  .form form {
     column-gap: 60px;
   }
 }
 
 @include vp-767 {
-  .form {
+  .form form {
     display: block;
 
     .form__box {

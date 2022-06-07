@@ -23,7 +23,7 @@
     color: $color-chambray;
   }
 
-  .card__price {
+  p:nth-child(3) {
     margin: 0;
     margin-left: 5px;
     font-weight: 700;
@@ -33,7 +33,7 @@
     position: relative;
   }
 
-  .card__price-shadow {
+  span:first-child {
     font-size: 100px;
     line-height: 150px;
     color: $color-whisper;
@@ -43,13 +43,18 @@
     left: -20px;
   }
 
-  .card__price-main {
+  span:last-child {
     position: relative;
     z-index: 1;
-  }
 
-  .card__price-ruble {
-    color: $color-sapphire;
+    span {
+      color: $color-sapphire;
+      font-weight: 700;
+      font-size: 60px;
+      line-height: 90px;
+      opacity: 1;
+      position: static;
+    }
   }
 
   @media (hover: hover), screen and (min-width: 0\0) {
@@ -140,16 +145,23 @@
       margin-bottom: 55px;
     }
 
-    .card__price {
+    p:nth-child(3) {
       font-size: 48px;
       line-height: 72px;
       margin-left: 8px;
     }
 
-    .card__price-shadow {
+    span:first-child {
       font-size: 80px;
       line-height: 120px;
       top: -45px;
+    }
+
+    span:last-child {
+      span {
+        font-size: 48px;
+        line-height: 72px;
+      }
     }
   }
 
