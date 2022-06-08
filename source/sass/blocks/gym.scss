@@ -1,4 +1,7 @@
 .gym {
+  position: relative;
+  margin-bottom: 228px;
+
   h2 {
     margin-bottom: 12px;
   }
@@ -50,27 +53,27 @@
   width: 364px;
   height: 228px;
 
-  position: relative;
-  top: -115px;
-  left: 3.4%;
+  position: absolute;
+  top: 287px;
+  left: 39.5%;
 }
 
 
 @include vp-1329 {
   .gym__video {
-    top: -85px;
-    left: 7%;
+    left: 42%;
   }
 }
 
 @include vp-1279 {
   .gym__video {
-    left: 10%;
+    left: 44%;
   }
 }
 
 @include vp-1199 {
   .gym {
+    position: static;
     margin-bottom: 10px;
 
     p {
@@ -113,9 +116,11 @@
   }
 
   .gym__video {
+    position: relative;
     width: 266px;
     height: 167px;
     left: 0;
+    top: -85px;
   }
 }
 
