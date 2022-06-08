@@ -18,6 +18,7 @@
   grid-template-columns: 1fr 23.08% 1fr;
   grid-template-rows: 1fr 1fr;
   column-gap: 57px;
+  row-gap: 80px;
 }
 
 .features__term {
@@ -70,12 +71,10 @@
 }
 
 .features__item--area {
-  align-self: start;
   padding-left: 25px;
 }
 
 .features__item--parking {
-  align-self: start;
   padding-right: 8px;
 
   .features__description {
@@ -84,15 +83,18 @@
 }
 
 .features__item--comfort {
-  align-self: end;
-  padding-left: 20px;
   margin-bottom: -4px;
+
+  padding-left: 20px;
+  padding-top: 40px;
 }
 
 .features__item--trainer {
-  align-self: end;
-  padding-right: 8px;
   margin-bottom: -4px;
+
+  padding-top: 40px;
+  padding-left: 3px;
+  padding-right: 8px;
 }
 
 .features__item--accent {
@@ -108,6 +110,7 @@
 
   flex-direction: column-reverse;
   align-items: center;
+  justify-content: start;
 
   .features__term {
     font-weight: 400;
@@ -214,11 +217,13 @@
 
   .features__item--comfort {
     padding-left: 0;
+    padding-top: 0;
     margin-bottom: 0;
   }
 
   .features__item--trainer {
     padding-left: 0;
+    padding-top: 0;
     margin-bottom: 0;
   }
 
