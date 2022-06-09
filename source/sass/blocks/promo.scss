@@ -17,7 +17,7 @@
 .promo__box--text {
   width: 34%;
   display: grid;
-  grid-template-columns: max-content auto;
+  grid-template-columns: max-content 1fr;
 }
 
 .promo__box--social {
@@ -188,6 +188,7 @@
   }
 
   .promo__heading {
+    width: 215px;
     margin-top: 0;
   }
 

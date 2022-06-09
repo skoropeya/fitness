@@ -15,11 +15,6 @@ const getTypeScreen = () => {
   }
 };
 
-const getMarginRight = (elem) => {
-  const value = window.getComputedStyle(elem, null).getPropertyValue('margin-right');
-  return +value.slice(0, -2);
-};
-
 const calculateImageSize = (images, originalImages, baseItemWidth, itemWidth) => {
   const coefficient = itemWidth / baseItemWidth;
 
@@ -42,4 +37,4 @@ const calculateItemSize = (items, itemWidth, coefficientCard) => {
   });
 };
 
-export {getOriginalSize, setSize, getTypeScreen, getMarginRight, calculateImageSize, calculateItemSize};
+export {getOriginalSize, setSize, getTypeScreen, calculateImageSize, calculateItemSize};

@@ -296,9 +296,9 @@
           <div class="container">
             <h2 class="trainers__heading heading">Тренеры</h2>
             <div class="trainers__wrrapper slider slider--trainers" data-is-adaptive="true" id="slider-trainers">
-              <div class="trainers__box slider__container">
-                <ul class="trainers__list slider__track">
-                  <li class="trainers__item slider__item trainer-card trainer-card--pavlova" tabindex="0">
+              <div class="trainers__box slider__container swiper">
+                <ul class="trainers__list slider__track swiper-wrapper">
+                  <li class="trainers__item slider__item trainer-card trainer-card--pavlova swiper-slide" tabindex="0">
                     <h3 class="trainer-card__name">Анна Павлова</h3>
 
                     <div class="trainer-card__box-img">
@@ -319,7 +319,7 @@
                     </div>
                   </li>
 
-                  <li class="trainers__item slider__item trainer-card trainer-card--lavrov" tabindex="0">
+                  <li class="trainers__item slider__item trainer-card trainer-card--lavrov swiper-slide" tabindex="0">
                     <h3 class="trainer-card__name">Алексей Лавров</h3>
 
                     <div class="trainer-card__box-img">
@@ -340,7 +340,7 @@
                     </div>
                   </li>
 
-                  <li class="trainers__item slider__item trainer-card trainer-card--pashkov" tabindex="0">
+                  <li class="trainers__item slider__item trainer-card trainer-card--pashkov swiper-slide" tabindex="0">
                     <h3 class="trainer-card__name">Александр Пашков</h3>
 
                     <div class="trainer-card__box-img">
@@ -361,7 +361,7 @@
                     </div>
                   </li>
 
-                  <li class="trainers__item slider__item trainer-card trainer-card--ketova" tabindex="0">
+                  <li class="trainers__item slider__item trainer-card trainer-card--ketova swiper-slide" tabindex="0">
                     <h3 class="trainer-card__name">Мария Кетова</h3>
 
                     <div class="trainer-card__box-img">
@@ -382,7 +382,7 @@
                     </div>
                   </li>
 
-                  <li class="trainers__item slider__item trainer-card trainer-card--pavlova" tabindex="0">
+                  <li class="trainers__item slider__item trainer-card trainer-card--pavlova swiper-slide" tabindex="0">
                     <h3 class="trainer-card__name">Анна Павлова2</h3>
 
                     <div class="trainer-card__box-img">
@@ -403,7 +403,7 @@
                     </div>
                   </li>
 
-                  <li class="trainers__item slider__item trainer-card trainer-card--lavrov" tabindex="0">
+                  <li class="trainers__item slider__item trainer-card trainer-card--lavrov swiper-slide" tabindex="0">
                     <h3 class="trainer-card__name">Алексей Лавров2</h3>
 
                     <div class="trainer-card__box-img">
@@ -424,7 +424,7 @@
                     </div>
                   </li>
 
-                  <li class="trainers__item slider__item trainer-card trainer-card--pashkov" tabindex="0">
+                  <li class="trainers__item slider__item trainer-card trainer-card--pashkov swiper-slide" tabindex="0">
                     <h3 class="trainer-card__name">Александр Пашков2</h3>
 
                     <div class="trainer-card__box-img">
@@ -445,7 +445,7 @@
                     </div>
                   </li>
 
-                  <li class="trainers__item slider__item trainer-card trainer-card--ketova" tabindex="0">
+                  <li class="trainers__item slider__item trainer-card trainer-card--ketova swiper-slide" tabindex="0">
                     <h3 class="trainer-card__name">Мария Кетова2</h3>
 
                     <div class="trainer-card__box-img">
@@ -468,13 +468,13 @@
                 </ul>
               </div>
 
-              <button class="slider__btn slider__btn--previous" type="button">
+              <button class="trainers-button-prev slider__btn slider__btn--previous" type="button">
                 <span class="visually-hidden">Предыдущий слайд</span>
                 <svg class="slider__btn-icon" width="16" height="32">
                   <use xlink:href="img/sprite_auto.svg#arrow"></use>
                 </svg>
               </button>
-              <button class="slider__btn slider__btn--next" type="button">
+              <button class="trainers-button-next slider__btn slider__btn--next" type="button">
                 <span class="visually-hidden">Следующий слайд</span>
                 <svg class="slider__btn-icon" width="16" height="32">
                   <use xlink:href="img/sprite_auto.svg#arrow"></use>
@@ -585,9 +585,9 @@
           <div class="container">
             <h2 class="reviews__heading heading">Отзывы</h2>
             <div class="reviews__wrapper slider slider--reviews" data-is-adaptive="false" id="slider-reviews">
-              <div class="reviews__box slider__container">
-                <ul class="reviews__list slider__track">
-                  <li class="reviews__item slider__item">
+              <div class="reviews__box slider__container swiper">
+                <ul class="reviews__list slider__track swiper-wrapper">
+                  <li class="reviews__item slider__item  swiper-slide">
                     <blockquote>
                       <div class="reviews__photo">
                         <!-- 1х: 124px x 174px; 2x: 248px x 348px -->
@@ -601,7 +601,7 @@
                     </blockquote>
                   </li>
 
-                  <li class="reviews__item slider__item">
+                  <li class="reviews__item slider__item  swiper-slide">
                     <blockquote>
                       <div class="reviews__photo">
                         <!-- 1х: 124px x 174px; 2x: 248px x 348px -->
@@ -617,13 +617,13 @@
                 </ul>
               </div>
 
-              <button class="slider__btn slider__btn--previous" type="button">
+              <button class="reviews-button-prev slider__btn slider__btn--previous" type="button">
                 <span class="visually-hidden">Предыдущий слайд</span>
                 <svg class="slider__btn-icon" width="16" height="32">
                   <use xlink:href="img/sprite_auto.svg#arrow"></use>
                 </svg>
               </button>
-              <button class="slider__btn slider__btn--next" type="button">
+              <button class="reviews-button-next slider__btn slider__btn--next" type="button">
                 <span class="visually-hidden">Следующий слайд</span>
                 <svg class="slider__btn-icon" width="16" height="32">
                   <use xlink:href="img/sprite_auto.svg#arrow"></use>
@@ -756,6 +756,8 @@
       </footer>
     </div>
 
+    <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>
 </html>
+`

@@ -9,10 +9,6 @@
 .slider__track {
   display: flex;
   justify-content: flex-start;
-
-  transition-property: transform;
-  transition-duration: 0.8s;
-  transition-timing-function: ease;
 }
 
 .slider__item {
