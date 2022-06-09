@@ -9,7 +9,6 @@
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="favicon/180.png">
-    <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page-body">
@@ -297,9 +296,9 @@
           <div class="container">
             <h2 class="trainers__heading heading">Тренеры</h2>
             <div class="trainers__wrrapper slider slider--trainers" data-is-adaptive="true" id="slider-trainers">
-              <div class="trainers__box slider__container">
-                <ul class="trainers__list slider__track">
-                  <li class="trainers__item slider__item trainer-card trainer-card--pavlova" tabindex="0">
+              <div class="trainers__box slider__container swiper">
+                <ul class="trainers__list slider__track swiper-wrapper">
+                  <li class="trainers__item slider__item trainer-card trainer-card--pavlova swiper-slide" tabindex="0">
                     <h3 class="trainer-card__name">Анна Павлова</h3>
 
                     <div class="trainer-card__box-img">
@@ -320,7 +319,7 @@
                     </div>
                   </li>
 
-                  <li class="trainers__item slider__item trainer-card trainer-card--lavrov" tabindex="0">
+                  <li class="trainers__item slider__item trainer-card trainer-card--lavrov swiper-slide" tabindex="0">
                     <h3 class="trainer-card__name">Алексей Лавров</h3>
 
                     <div class="trainer-card__box-img">
@@ -341,7 +340,7 @@
                     </div>
                   </li>
 
-                  <li class="trainers__item slider__item trainer-card trainer-card--pashkov" tabindex="0">
+                  <li class="trainers__item slider__item trainer-card trainer-card--pashkov swiper-slide" tabindex="0">
                     <h3 class="trainer-card__name">Александр Пашков</h3>
 
                     <div class="trainer-card__box-img">
@@ -362,7 +361,7 @@
                     </div>
                   </li>
 
-                  <li class="trainers__item slider__item trainer-card trainer-card--ketova" tabindex="0">
+                  <li class="trainers__item slider__item trainer-card trainer-card--ketova swiper-slide" tabindex="0">
                     <h3 class="trainer-card__name">Мария Кетова</h3>
 
                     <div class="trainer-card__box-img">
@@ -383,7 +382,7 @@
                     </div>
                   </li>
 
-                  <li class="trainers__item slider__item trainer-card trainer-card--pavlova" tabindex="0">
+                  <li class="trainers__item slider__item trainer-card trainer-card--pavlova swiper-slide" tabindex="0">
                     <h3 class="trainer-card__name">Анна Павлова2</h3>
 
                     <div class="trainer-card__box-img">
@@ -404,7 +403,7 @@
                     </div>
                   </li>
 
-                  <li class="trainers__item slider__item trainer-card trainer-card--lavrov" tabindex="0">
+                  <li class="trainers__item slider__item trainer-card trainer-card--lavrov swiper-slide" tabindex="0">
                     <h3 class="trainer-card__name">Алексей Лавров2</h3>
 
                     <div class="trainer-card__box-img">
@@ -425,7 +424,7 @@
                     </div>
                   </li>
 
-                  <li class="trainers__item slider__item trainer-card trainer-card--pashkov" tabindex="0">
+                  <li class="trainers__item slider__item trainer-card trainer-card--pashkov swiper-slide" tabindex="0">
                     <h3 class="trainer-card__name">Александр Пашков2</h3>
 
                     <div class="trainer-card__box-img">
@@ -446,7 +445,7 @@
                     </div>
                   </li>
 
-                  <li class="trainers__item slider__item trainer-card trainer-card--ketova" tabindex="0">
+                  <li class="trainers__item slider__item trainer-card trainer-card--ketova swiper-slide" tabindex="0">
                     <h3 class="trainer-card__name">Мария Кетова2</h3>
 
                     <div class="trainer-card__box-img">
@@ -469,13 +468,13 @@
                 </ul>
               </div>
 
-              <button class="slider__btn slider__btn--previous" type="button">
+              <button class="trainers-button-prev slider__btn slider__btn--previous" type="button">
                 <span class="visually-hidden">Предыдущий слайд</span>
                 <svg class="slider__btn-icon" width="16" height="32">
                   <use xlink:href="img/sprite_auto.svg#arrow"></use>
                 </svg>
               </button>
-              <button class="slider__btn slider__btn--next" type="button">
+              <button class="trainers-button-next slider__btn slider__btn--next" type="button">
                 <span class="visually-hidden">Следующий слайд</span>
                 <svg class="slider__btn-icon" width="16" height="32">
                   <use xlink:href="img/sprite_auto.svg#arrow"></use>
@@ -550,32 +549,35 @@
         <section class="promotion">
           <div class="container">
             <h2 class="promotion__heading heading">Акции</h2>
+            <div class="promotion__wrapper">
+              <ul class="promotion__list promotion__list--hit">
+                <li class="promotion__item promotion__item--hit">
+                  <div class="promotion__item-box">
+                    <h3>Год <span>4999</span></h3>
+                    <p>Безлимитный абонемент в&nbsp;тренажерный зал</p>
+                    <a class="promotion__btn" href="#">подробнее</a>
+                  </div>
+                </li>
+              </ul>
 
-            <ul class="promotion__list">
-              <li class="promotion__item promotion__item--hit">
-                <div class="promotion__item-box">
-                  <h3>Год <span>4999</span></h3>
-                  <p>Безлимитный абонемент в&nbsp;тренажерный зал</p>
-                  <a class="promotion__btn" href="#">подробнее</a>
-                </div>
-              </li>
+              <ul class="promotion__list">
+                <li class="promotion__item">
+                  <div class="promotion__item-box">
+                    <h3>Месяц бесплатно</h3>
+                    <p>Приведи друга, получи <br>абонемент в&nbsp;подарок</p>
+                    <a class="promotion__btn" href="#">подробнее</a>
+                  </div>
+                </li>
 
-              <li class="promotion__item">
-                <div class="promotion__item-box">
-                  <h3>Месяц бесплатно</h3>
-                  <p>Приведи друга, получи <br>абонемент в&nbsp;подарок</p>
-                  <a class="promotion__btn" href="#">подробнее</a>
-                </div>
-              </li>
-
-              <li class="promotion__item">
-                <div class="promotion__item-box">
-                  <h3>Скидка 20%</h3>
-                  <p>Корпоративный фитнес с&nbsp;командой</p>
-                  <a class="promotion__btn" href="#">подробнее</a>
-                </div>
-              </li>
-            </ul>
+                <li class="promotion__item">
+                  <div class="promotion__item-box">
+                    <h3>Скидка 20%</h3>
+                    <p>Корпоративный фитнес с&nbsp;командой</p>
+                    <a class="promotion__btn" href="#">подробнее</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
 
@@ -583,9 +585,9 @@
           <div class="container">
             <h2 class="reviews__heading heading">Отзывы</h2>
             <div class="reviews__wrapper slider slider--reviews" data-is-adaptive="false" id="slider-reviews">
-              <div class="reviews__box slider__container">
-                <ul class="reviews__list slider__track">
-                  <li class="reviews__item slider__item">
+              <div class="reviews__box slider__container swiper">
+                <ul class="reviews__list slider__track swiper-wrapper">
+                  <li class="reviews__item slider__item  swiper-slide">
                     <blockquote>
                       <div class="reviews__photo">
                         <!-- 1х: 124px x 174px; 2x: 248px x 348px -->
@@ -599,7 +601,7 @@
                     </blockquote>
                   </li>
 
-                  <li class="reviews__item slider__item">
+                  <li class="reviews__item slider__item  swiper-slide">
                     <blockquote>
                       <div class="reviews__photo">
                         <!-- 1х: 124px x 174px; 2x: 248px x 348px -->
@@ -615,13 +617,13 @@
                 </ul>
               </div>
 
-              <button class="slider__btn slider__btn--previous" type="button">
+              <button class="reviews-button-prev slider__btn slider__btn--previous" type="button">
                 <span class="visually-hidden">Предыдущий слайд</span>
                 <svg class="slider__btn-icon" width="16" height="32">
                   <use xlink:href="img/sprite_auto.svg#arrow"></use>
                 </svg>
               </button>
-              <button class="slider__btn slider__btn--next" type="button">
+              <button class="reviews-button-next slider__btn slider__btn--next" type="button">
                 <span class="visually-hidden">Следующий слайд</span>
                 <svg class="slider__btn-icon" width="16" height="32">
                   <use xlink:href="img/sprite_auto.svg#arrow"></use>
@@ -693,25 +695,21 @@
       <footer class="page-footer">
         <div class="container">
           <div class="page-footer__wrapper">
-            <div class="page-footer__box page-footer__box--logo">
-              <a class="page-footer__logo logotype">
-                <svg class="logotype__img" width="89" height="20">
-                  <use xlink:href="img/sprite_auto.svg#logo"></use>
-                </svg>
-              </a>
-            </div>
-
             <div class="page-footer__box page-footer__box--nav">
               <ul class="page-footer__menu-list">
+                <li class="page-footer__menu-item page-footer__menu-item--logo">
+                  <a class="logotype">
+                    <svg class="logotype__img" width="89" height="20">
+                      <use xlink:href="img/sprite_auto.svg#logo"></use>
+                    </svg>
+                  </a>
+                </li>
                 <li class="page-footer__menu-item">
                   <a href="#">Услуги</a>
                 </li>
                 <li class="page-footer__menu-item">
                   <a href="#">Абонементы</a>
                 </li>
-              </ul>
-
-              <ul class="page-footer__menu-list">
                 <li class="page-footer__menu-item">
                   <a href="#">Акции</a>
                 </li>
@@ -758,6 +756,8 @@
       </footer>
     </div>
 
+    <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>
 </html>
+`
